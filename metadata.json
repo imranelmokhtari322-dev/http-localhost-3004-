@@ -1,0 +1,6 @@
+{
+  "name": "SwivTV",
+  "description": "Premium IPTV voor iedereen. Ervaar ultrasnelle, buffer-vrije streaming met meer dan 20.000 live tv-zenders, films en series.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
