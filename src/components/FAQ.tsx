@@ -9,7 +9,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-xs uppercase font-mono text-white/40 font-bold tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-3 inline-block">VEELGESTELDE VRAGEN</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-white mb-4">Veelgestelde vragen & antwoorden</h2>
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-white mb-4">Veelgestelde vragen <span className="text-gradient-blue">&amp; antwoorden</span></h2>
           <p className="text-white/50 text-sm sm:text-base">Staat je vraag er niet tussen? Stel hem via WhatsApp!</p>
         </div>
         <div className="flex flex-col gap-3 text-left">
@@ -35,7 +35,7 @@ export default function FAQ() {
             <p className="text-xs text-white/50">Heb je een specifieke vraag? Stuur ons direct een WhatsApp-bericht.</p>
           </div>
           <a href="https://wa.me/31600000000" target="_blank" rel="noreferrer"
-            className="px-5 py-2.5 rounded-xl bg-white hover:bg-gray-100 text-black font-bold text-xs tracking-wide whitespace-nowrap text-center transition-colors">
+            className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-bold text-xs tracking-wide whitespace-nowrap text-center transition-all shadow-md shadow-blue-500/20">
             Stel via WhatsApp
           </a>
         </div>

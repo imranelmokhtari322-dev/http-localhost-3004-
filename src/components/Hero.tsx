@@ -8,16 +8,17 @@ interface HeroProps {
 export default function Hero({ onScrollTo }: HeroProps) {
   return (
     <section className="relative bg-dark-bg text-white pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden border-b border-white/5" id="hero-section">
-      <div className="absolute top-[-20%] left-[-5%] w-[45%] h-[60%] rounded-full bg-white/5 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[40%] h-[50%] rounded-full bg-white/3 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-20%] left-[-5%] w-[50%] h-[70%] rounded-full bg-blue-600/20 blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-5%] w-[45%] h-[60%] rounded-full bg-violet-600/15 blur-[130px] pointer-events-none" />
+      <div className="absolute top-[30%] left-[30%] w-[30%] h-[40%] rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Promo pill */}
         <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-semibold text-white mb-6">
-          <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-          Bestel nu en ontvang&nbsp;<strong className="uppercase tracking-wide">3 maanden gratis</strong>
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/30 text-sm font-semibold text-white mb-6">
+          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+          Bestel nu en ontvang&nbsp;<strong className="uppercase tracking-wide text-gradient-blue">3 maanden gratis</strong>
         </motion.div>
 
         {/* Heading block with phone behind */}
@@ -26,18 +27,15 @@ export default function Hero({ onScrollTo }: HeroProps) {
           {/* Phone */}
           <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
             className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-0">
-            <div className="relative w-[210px] rounded-[2.2rem] border-[5px] border-white/20 shadow-2xl overflow-hidden bg-dark-card">
+            <div className="relative w-[240px] rounded-[2.2rem] border-[5px] border-white/20 shadow-2xl overflow-hidden bg-dark-card">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-dark-bg rounded-b-2xl z-20" />
-              <div className="px-4 pt-9 pb-4 flex flex-col gap-3 min-h-[340px]">
-                <div className="flex justify-center">
-                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[9px] font-bold tracking-widest uppercase">
-                    <span className="w-1 h-1 rounded-full bg-white animate-pulse" />Start Vandaag
+              <div className="px-4 pt-9 pb-4 flex flex-col gap-3 h-[380px]">
+                <div className="flex-1 flex flex-col items-center justify-center text-center gap-2">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-widest uppercase">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />Start Vandaag
                   </span>
-                </div>
-                <div className="text-center flex flex-col gap-0.5">
-                  <h3 className="text-2xl font-black text-white leading-tight">Doe mee</h3>
-                  <h3 className="text-3xl font-black text-white leading-tight underline decoration-white decoration-2 underline-offset-4">SwivTV</h3>
-                  <p className="text-white/60 text-xs font-medium mt-1">Eén abonnement voor alles.</p>
+                  <h3 className="text-[4rem] text-white leading-none underline decoration-white decoration-2 underline-offset-4" style={{ fontFamily: "'Modak', cursive" }}>SwivTV</h3>
+                  <p className="text-white/60 text-xs font-medium">Eén abonnement voor alles.</p>
                 </div>
                 <button onClick={() => onScrollTo("#pricing-section")} className="w-full py-2.5 rounded-xl bg-white text-black font-black text-sm cursor-pointer text-center hover:bg-gray-100 transition-colors">
                   Bekijk prijzen
@@ -64,10 +62,10 @@ export default function Hero({ onScrollTo }: HeroProps) {
 
           {/* Heading */}
           <motion.h1 initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative z-10 text-[clamp(4rem,13vw,8rem)] font-extrabold font-display tracking-tighter leading-[1.05] text-white max-w-2xl">
+            className="relative z-10 text-[clamp(4rem,13vw,8rem)] leading-[1.05] text-white max-w-2xl" style={{ fontFamily: "'Modak', cursive" }}>
             Premium IPTV<br />
-            <span className="font-extrabold">voor </span>
-            <span className="italic font-serif font-normal">iedereen</span>
+            <span>voor </span>
+            <span className="text-gradient-blue italic font-serif font-normal">iedereen</span>
           </motion.h1>
         </div>
 
@@ -81,7 +79,7 @@ export default function Hero({ onScrollTo }: HeroProps) {
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-0">
           <button onClick={() => onScrollTo("#pricing-section")}
-            className="px-10 py-5 rounded-full text-black bg-white hover:bg-gray-100 transition-all hover:scale-[1.02] shadow-lg text-center cursor-pointer text-lg font-black">
+            className="px-10 py-5 rounded-full text-white bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 transition-all hover:scale-[1.02] shadow-lg shadow-blue-500/30 text-center cursor-pointer text-lg font-black">
             Bekijk prijzen
           </button>
           <button onClick={() => onScrollTo("#pricing-section")}
@@ -102,6 +100,14 @@ export default function Hero({ onScrollTo }: HeroProps) {
           <div className="flex items-center gap-2 text-white/60 text-sm">
             <ShieldCheck className="w-4 h-4 text-white" /><span>Geen Buffering</span>
           </div>
+        </motion.div>
+
+        {/* Stats lines */}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-8 flex flex-col gap-1.5">
+          <p className="text-xs text-white/40">✦ 23.000+ tevreden klanten</p>
+          <p className="text-xs text-white/40">✦ 80.000+ live zenders · 200K+ films & series</p>
+          <p className="text-xs text-white/40">✦ 24/7 support · instant activering</p>
         </motion.div>
       </div>
     </section>

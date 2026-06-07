@@ -7,7 +7,8 @@ interface FooterProps {
 
 export default function Footer({ onScrollTo, onOpenReseller }: FooterProps) {
   return (
-    <footer className="bg-dark-bg border-t border-white/5 text-white/50 py-12 md:py-16" id="main-footer">
+    <footer className="relative bg-dark-bg text-white/50 py-12 md:py-16" id="main-footer">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
           <div className="md:col-span-4 flex flex-col items-start gap-4">
@@ -17,7 +18,7 @@ export default function Footer({ onScrollTo, onOpenReseller }: FooterProps) {
                   <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                 </div>
               </div>
-              <span className="text-lg font-bold font-display tracking-tight text-white">SwivTV</span>
+              <span className="text-lg font-bold font-display tracking-tight text-gradient-blue">SwivTV</span>
             </div>
             <p className="text-xs text-white/40 leading-relaxed max-w-sm">SwivTV is de meest stabiele IPTV provider van Nederland en België. Geniet van live TV, sport en VOD op al je apparaten.</p>
             <div className="flex items-center gap-2 text-[10px] uppercase font-mono tracking-wider font-bold text-white/60 mt-2">

@@ -1,18 +1,20 @@
 export default function ChannelSearch() {
   const channelLogos = [
-    { name: "F1 TV",       logo: "/assets/channels/f1.png",          invert: true  },
-    { name: "ESPN",        logo: "/assets/channels/espn.png",         invert: true  },
-    { name: "Viaplay",     logo: "/assets/channels/viaplay.png",      invert: true  },
-    { name: "Ziggo Sport", logo: "/assets/channels/ziggo-sport.png",  invert: true  },
-    { name: "Eurosport",   logo: "/assets/channels/eurosport.png",    invert: true  },
-    { name: "Sky Sport",   logo: "/assets/channels/sky-sports.png",   invert: false },
-    { name: "DAZN",        logo: "/assets/channels/dazn.png",         invert: true  },
+    { name: "F1 TV",       logo: "/assets/channels/f1.png"          },
+    { name: "ESPN",        logo: "/assets/channels/espn.png"         },
+    { name: "Viaplay",     logo: "/assets/channels/viaplay.png"      },
+    { name: "Ziggo Sport", logo: "/assets/channels/ziggo-sport.png"  },
+    { name: "Eurosport",   logo: "/assets/channels/eurosport.png"    },
+    { name: "Sky Sport",   logo: "/assets/channels/sky-sports.png"   },
+    { name: "DAZN",        logo: "/assets/channels/dazn.png"         },
   ];
 
   const doubled = [...channelLogos, ...channelLogos];
 
   const bigNames = ["CHAMPIONS LEAGUE","FORMULE 1","NPO","RTL","SBS","NETFLIX","ZIGGO SPORT","ESPN","VIAPLAY","EUROSPORT","HBO MAX","DISNEY+","VIDEOLAND","SKY SPORTS","DAZN"];
   const doubledNames = [...bigNames, ...bigNames];
+
+  const accentWords = new Set(["CHAMPIONS LEAGUE","FORMULE 1","NETFLIX","ZIGGO SPORT","VIAPLAY","HBO MAX"]);
 
   return (
     <section className="relative bg-dark-bg text-white py-14 border-b border-white/5 overflow-hidden" id="channels-section">
@@ -21,7 +23,7 @@ export default function ChannelSearch() {
       <div className="w-full overflow-hidden relative mb-12">
         <div className="animate-scroll whitespace-nowrap flex gap-16 py-3">
           {doubledNames.map((name, i) => (
-            <span key={i} className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display tracking-tight text-white select-none flex-shrink-0 opacity-10">
+            <span key={i} className={`text-3xl sm:text-4xl md:text-5xl font-extrabold font-display tracking-tight select-none flex-shrink-0 ${accentWords.has(name) ? "text-gradient-blue opacity-100" : "text-white opacity-30"}`}>
               {name}
             </span>
           ))}
@@ -29,9 +31,12 @@ export default function ChannelSearch() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <span className="text-[10px] uppercase font-mono text-white/50 font-bold tracking-widest block mb-1">LIVE TV</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white">Al je favoriete zenders</h2>
+        <div className="mb-8 flex items-end justify-between">
+          <div>
+            <span className="text-[10px] uppercase font-mono text-white/50 font-bold tracking-widest block mb-1">LIVE TV</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white">Al je favoriete <span className="text-gradient-blue">zenders</span></h2>
+          </div>
+          <span className="text-xs text-white/30 font-mono hidden sm:block">80.000+ kanalen</span>
         </div>
 
         {/* Auto-scrolling logos */}
@@ -41,8 +46,12 @@ export default function ChannelSearch() {
           <div className="animate-scroll-slow">
             <div className="flex gap-5 px-2">
               {doubled.map((ch, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center w-[140px] h-[90px] sm:w-[160px] sm:h-[100px] hover:bg-white/10 hover:scale-105 transition-all duration-200 cursor-pointer flex-shrink-0">
-                  <img src={ch.logo} alt={ch.name} className={`w-[75%] h-[75%] object-contain ${ch.invert ? "brightness-0 invert" : ""}`} style={!ch.invert ? { mixBlendMode: "screen" } : {}} />
+                <div key={i} className="bg-white rounded-2xl flex items-center justify-center w-[140px] h-[90px] sm:w-[160px] sm:h-[100px] hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-200 cursor-pointer flex-shrink-0 border border-white/10">
+                  <img
+                    src={ch.logo}
+                    alt={ch.name}
+                    className="w-[75%] h-[75%] object-contain"
+                  />
                 </div>
               ))}
             </div>

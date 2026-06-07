@@ -74,12 +74,18 @@ export default function PricingCalculator() {
           <span className="text-xs uppercase font-mono text-white/40 font-bold tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-6 inline-block">PRIJZEN</span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-white leading-tight mb-10">
             Eén abonnement,{" "}
-            <span className="italic font-serif font-normal">eindeloze</span>
+            <span className="text-gradient-blue italic font-serif font-normal">eindeloze</span>
             <br />mogelijkheden
           </h2>
 
+          {/* Subtext */}
+          <p className="text-white/70 text-base sm:text-lg font-medium mb-8 leading-relaxed">
+            Het is <span className="text-white font-bold italic">"je gaat nooit meer terug"</span> beter.<br />
+            <span className="text-white/50 text-sm sm:text-base font-normal">SwivTV vervangt dure Ziggo-pakketten en meerdere streamingdiensten voor één vaste prijs.</span>
+          </p>
+
           {/* Countdown timer */}
-          <div className="inline-block bg-dark-card border border-white/10 rounded-2xl px-8 py-6 shadow-xl">
+          <div className="inline-block bg-dark-card border border-blue-500/20 rounded-2xl px-8 py-6 shadow-xl bg-glow-blue">
             <div className="flex items-center gap-2 justify-center mb-5">
               <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
               <span className="text-[11px] font-bold uppercase tracking-widest text-white/50 font-mono">
@@ -171,17 +177,18 @@ export default function PricingCalculator() {
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
 
           {/* Premium VIP */}
-          <div className="relative rounded-2xl border border-purple-500/40 bg-gradient-to-b from-purple-900/30 to-dark-card p-8 min-h-[560px] flex flex-col">
-            <div className="flex justify-center mb-3"><span className="bg-white text-black text-[10px] font-extrabold px-5 py-1.5 rounded-full uppercase tracking-widest shadow-md">BESTE DEAL</span></div>
+          <div className="relative rounded-2xl border border-yellow-400/50 bg-gradient-to-b from-yellow-900/20 to-dark-card p-8 min-h-[560px] flex flex-col shadow-xl shadow-yellow-500/10">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-yellow-400/5 to-amber-600/5 pointer-events-none" />
+            <div className="flex justify-center mb-3"><span className="bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-[10px] font-extrabold px-5 py-1.5 rounded-full uppercase tracking-widest shadow-md">👑 BESTE DEAL</span></div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="flex items-center gap-1 px-2 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-[10px] font-bold uppercase tracking-widest">
+              <span className="flex items-center gap-1 px-2 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/40 text-yellow-300 text-[10px] font-bold uppercase tracking-widest">
                 ✦ PREMIUM VIP +
               </span>
             </div>
-            <p className="text-white/50 text-xs font-mono uppercase tracking-widest mb-1">12+3 MAANDEN</p>
+            <p className="text-yellow-400/70 text-xs font-mono uppercase tracking-widest mb-1">12+3 MAANDEN</p>
             <h3 className="text-2xl font-extrabold text-white mb-4">Premium VIP Pakket</h3>
             <div className="mb-4">
-              <span className="text-5xl font-black text-white">€{vipPrice.toFixed(2).replace(".",",")}</span>
+              <span className="text-5xl font-black text-yellow-300">€{vipPrice.toFixed(2).replace(".",",")}</span>
             </div>
             <p className="text-white/40 text-xs mb-5 flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -206,8 +213,8 @@ export default function PricingCalculator() {
                 "Videoland, Netflix, Amazon, HBO, Apple TV, Hulu",
               ].map((feature) => (
                 <div key={feature} className="flex items-start gap-2.5 text-xs text-white/80">
-                  <div className="w-4 h-4 rounded-full bg-purple-500/30 border border-purple-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-2.5 h-2.5 text-purple-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                  <div className="w-4 h-4 rounded-full bg-yellow-400/20 border border-yellow-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-2.5 h-2.5 text-yellow-300" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
                     </svg>
                   </div>
@@ -216,10 +223,11 @@ export default function PricingCalculator() {
               ))}
             </div>
 
-            <button onClick={() => { setCheckoutStep("details"); setCheckoutModalOpen(true); }}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold text-sm uppercase tracking-wide transition-all cursor-pointer shadow-lg mt-auto">
+            <a href={`https://wa.me/447449708976?text=${encodeURIComponent("Hallo, ik wil het Premium VIP Pakket bestellen. " + selectedDevices + " scherm(en), 12+3 maanden. €" + vipPrice.toFixed(2) + ".")}`}
+              target="_blank" rel="noreferrer"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-black font-bold text-sm uppercase tracking-wide transition-all cursor-pointer shadow-lg shadow-yellow-500/25 mt-auto text-center block">
               Bestel Nu &rarr;
-            </button>
+            </a>
           </div>
 
           {/* Basis */}
@@ -267,10 +275,11 @@ export default function PricingCalculator() {
               ))}
             </div>
 
-            <button onClick={() => { setCheckoutStep("details"); setCheckoutModalOpen(true); }}
-              className="w-full py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold text-sm uppercase tracking-wide transition-all cursor-pointer mt-auto">
+            <a href={`https://wa.me/447449708976?text=${encodeURIComponent("Hallo, ik wil het Basis Pakket bestellen. " + selectedDevices + " scherm(en), 12 maanden. €" + normalPrice.toFixed(2) + ".")}`}
+              target="_blank" rel="noreferrer"
+              className="w-full py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold text-sm uppercase tracking-wide transition-all cursor-pointer mt-auto text-center block">
               Bestel Nu &rarr;
-            </button>
+            </a>
           </div>
         </div>
 
