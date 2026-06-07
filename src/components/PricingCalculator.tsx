@@ -71,7 +71,7 @@ export default function PricingCalculator() {
 
         {/* Hero pricing block — above the configurator */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs uppercase font-mono text-white/40 font-bold tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-6 inline-block">PRIJZEN</span>
+          <span className="text-sm text-gradient-blue tracking-widest bg-white/5 border border-blue-400/20 px-3 py-1 rounded-full mb-6 inline-block uppercase" style={{ fontFamily: "'Modak', cursive" }}>PRIJZEN</span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-white leading-tight mb-10">
             Eén abonnement,{" "}
             <span className="text-gradient-blue italic font-serif font-normal">eindeloze</span>
@@ -116,7 +116,7 @@ export default function PricingCalculator() {
 
         {/* Configurator title */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <span className="text-xs uppercase font-mono text-white/40 font-bold tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-3 inline-block">IPTV ABONNEMENTEN</span>
+          <span className="text-sm text-gradient-blue tracking-widest bg-white/5 border border-blue-400/20 px-3 py-1 rounded-full mb-3 inline-block uppercase" style={{ fontFamily: "'Modak', cursive" }}>IPTV ABONNEMENTEN</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-white mb-4">Eén vast tarief, onbeperkt plezier</h2>
           <p className="text-white/50 text-sm sm:text-base">Kies je periode en aantal apparaten. Geen onverwachte kosten.</p>
         </div>

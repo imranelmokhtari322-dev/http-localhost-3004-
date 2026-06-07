@@ -38,7 +38,7 @@ const SectionRow: React.FC<{ label: string; title: string; badge: string; childr
   <div className="mb-12">
     <div className="flex items-center justify-between mb-5">
       <div>
-        <span className="text-[10px] uppercase font-mono text-white/40 font-bold tracking-widest block mb-1">{label}</span>
+        <span className="text-sm text-white tracking-widest block mb-1 uppercase" style={{ fontFamily: "'Modak', cursive" }}>{label}</span>
         <h2 className="text-xl sm:text-2xl font-extrabold font-display tracking-tight text-white">{title}</h2>
       </div>
       <span className="text-[10px] font-mono font-bold text-white/30 uppercase tracking-widest hidden sm:block">{badge}</span>

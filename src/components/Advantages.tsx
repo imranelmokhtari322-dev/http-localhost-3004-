@@ -53,7 +53,7 @@ export default function Advantages() {
         </div>
 
         <div className="text-center">
-          <span className="text-xs uppercase font-mono text-white/40 font-bold tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-6 inline-block">
+          <span className="text-sm text-gradient-blue tracking-widest bg-white/5 border border-blue-400/20 px-3 py-1 rounded-full mb-6 inline-block uppercase" style={{ fontFamily: "'Modak', cursive" }}>
             23000+ TEVREDEN KLANTEN
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-white leading-tight">

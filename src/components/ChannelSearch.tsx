@@ -33,7 +33,7 @@ export default function ChannelSearch() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <span className="text-[10px] uppercase font-mono text-white/50 font-bold tracking-widest block mb-1">LIVE TV</span>
+            <span className="text-sm text-gradient-blue tracking-widest block mb-1 uppercase" style={{ fontFamily: "'Modak', cursive" }}>LIVE TV</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white">Al je favoriete <span className="text-gradient-blue">zenders</span></h2>
           </div>
           <span className="text-xs text-white/30 font-mono hidden sm:block">80.000+ kanalen</span>

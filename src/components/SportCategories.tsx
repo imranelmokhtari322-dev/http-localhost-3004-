@@ -16,7 +16,7 @@ export default function SportCategories() {
     <section className="py-16 border-b border-white/5 overflow-hidden bg-dark-bg" id="sport-categories-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <span className="text-[10px] uppercase font-mono text-white/50 font-bold tracking-widest block mb-2">VAN EREDIVISIE TOT FORMULE 1</span>
+          <span className="text-sm text-gradient-blue block mb-2 uppercase tracking-[0.2em]" style={{ fontFamily: "'Modak', cursive" }}>VAN EREDIVISIE TOT FORMULE 1</span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display tracking-tight text-white">
             Alle Sporten Live <span className="text-gradient-blue">in 4K</span>
           </h2>

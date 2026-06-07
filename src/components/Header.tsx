@@ -50,7 +50,7 @@ export default function Header({ onScrollTo, onOpenReseller }: HeaderProps) {
             <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 border border-white/20 group-hover:bg-white/20 transition-all">
               <Logo size={28} />
             </div>
-            <span className="text-3xl text-white" style={{ fontFamily: "'Lilita One', cursive" }}>SwivTV</span>
+            <span className="text-3xl text-white" style={{ fontFamily: "'Modak', cursive" }}>SwivTV</span>
           </div>
 
           {/* Right side */}

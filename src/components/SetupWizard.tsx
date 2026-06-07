@@ -21,7 +21,7 @@ export default function SetupWizard() {
     <section className="bg-dark-bg text-white py-16 border-b border-white/5" id="setup-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs uppercase font-mono text-white/40 font-bold tracking-widest bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-3 inline-block">STAP-VOOR-STAP INSTALLATIE</span>
+          <span className="text-sm text-gradient-blue tracking-widest bg-white/5 border border-blue-400/20 px-3 py-1 rounded-full mb-3 inline-block uppercase" style={{ fontFamily: "'Modak', cursive" }}>STAP-VOOR-STAP INSTALLATIE</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-white mb-4">Eenvoudige installatie op <span className="text-gradient-blue">elk apparaat</span></h2>
           <p className="text-white/50 text-sm sm:text-base">Selecteer je apparaat en volg de simpele 4-stappen handleiding.</p>
         </div>
