@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <rect width="200" height="120" fill="white"/>
+  <!-- Top green bar -->
+  <rect x="0" y="0" width="200" height="6" fill="#2E7D32"/>
+  <!-- "france" wordmark -->
+  <text x="100" y="52" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#003189" text-anchor="middle" letter-spacing="5">france</text>
+  <!-- Large green "3" -->
+  <text x="100" y="105" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" fill="#2E7D32" text-anchor="middle">3</text>
+</svg>
