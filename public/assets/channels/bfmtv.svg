@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <rect width="200" height="120" fill="#D80027"/>
+  <!-- BFM large -->
+  <text x="100" y="58" font-family="Arial Black, Arial, sans-serif" font-size="46" font-weight="900" fill="white" text-anchor="middle" letter-spacing="1">BFM</text>
+  <!-- Separator line -->
+  <rect x="40" y="66" width="120" height="3" rx="1.5" fill="rgba(255,255,255,0.35)"/>
+  <!-- TV below, slightly smaller -->
+  <text x="100" y="101" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="white" text-anchor="middle" letter-spacing="6">TV</text>
+</svg>
